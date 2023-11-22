@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Applications</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css')}}" />
+    <link rel="shortcut icon" href="{{url_for('static', filename = './images/robot-solid.svg')}}" />
+    <!-- Link icons -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+    <!-- Link Boostraps -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Main Container Start -->
+    <div class="main-container">
+        <!-- Sidebar Start -->
+        <div class="sidebar">
+            <div class="logo">
+                <a href=""><i class="fa fa-robot"></i></a>
+            </div>
+            <div class="nav-toggler" id="toggle-btn">
+                <i class="fa fa-bars"></i>
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <ul class="nav" id="nav">
+                <li><a id="home-link" href="#home"><i class="fa fa-home"></i><span>Home</span></a></li>
+                <li><a id="image-classifier-link" href="#image-classifier"><i class="fa-brands fa-searchengin"></i><span>Cat / Dog Classifier</span></a></li>
+                <li><a id="sentiment-analysis-link" href="#sentiment-analysis"><i class="fa-regular fa-face-smile-wink"></i><span>Text Sentiment Analysis</span></a></li>
+                <li><a id="NER-link" href="#NER"><i class="fa fa-file-signature"></i><span>Name Entity Recognition</span></a></li>
+                <li><a id="contact-link" href="#contact"><i class="fa fa-comments"></i><span>Contact</span></a></li>
+            </ul>
+        </div>
+        <!-- Sidebar End -->
+        <!-- Main Content Start -->
+        <div class="main-content">
+            <!-- Home Section Start -->
+            <section class="home section" id="home">
+                <div class="container" style="padding-top: 40px;">
+                    <div class="row">
+                        <div class="home-info padd-15">
+                            <h2 class="hello">Hi, my name is <span class="name">Vinh Phu</span>
+                                <img src="{{url_for('static', filename = './images/waving.png')}}"  >
+                            </h2>
+                            <p class="text1">I'm an IT student in Sydney, Australia. 📍</p>
+                            <p class="text2 mb-3">This web application is the demo for machine learning model that I have learnt at university. 🚀</p>
+                            <span class="home-info-link d-flex gap-3">
+                                <a aria-label="linkedin" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/vinhphu97/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-brand-linkedin"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path><path d="M8 11l0 5"></path><path d="M8 8l0 .01"></path><path d="M12 16l0 -5"></path><path d="M16 16v-3a2 2 0 0 0 -4 0"></path></svg>
+                                </a>
+                                <a aria-label="github" rel="noreferrer" target="_blank" href="https://github.com/vinhphuphan/vinhphuphan">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-brand-github"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg>
+                                </a>
+                            </span>
+                            <div class="skills d-flex align-items-center mb-3">
+                                <p style="font-weight: 500;">Tech Stack : </p>
+                                <div class="logos">
+                                    <ul class="icon-list d-flex gap-1">
+                                        <li><img src="https://skillicons.dev/icons?i=py" alt="skill-icon"/></li>
+                                        <li><img src="https://skillicons.dev/icons?i=r" alt="skill-icon"/></li>
+                                        <li><img src="https://skillicons.dev/icons?i=html" alt="skill-icon"/></li>
+                                        <li><img src="https://skillicons.dev/icons?i=css" alt="skill-icon"/></li>
+                                        <li><img src="https://skillicons.dev/icons?i=js" alt="skill-icon"/></li>
+                                        <li><img src="https://skillicons.dev/icons?i=mysql" alt="skill-icon"/></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button href="" class="hire-me mybtn" style="text-decoration: none;" onclick="clickContactLink()">Contact Me</button>
+                        </div>
+                        <div class="home-img padd-15">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Home Section End -->
+
+            <!-- Cat / Dog Classifier Section Start -->
+            <section class="image-classifier section hidden {% if active_section == 'image-classifier' %}active{% endif %}" id="image-classifier">
+                <div class="container">
+                    <h2 class="text-center" style="color : #183153 ; font-size : calc(1em * 2); font-weight :500;">Cat/Dog Classifier</h2>
+                    <h5 class="classifier-text text-center" style="padding: 1rem;">Cat / Dog Classifier can accurately tell the animal in the image Cat or Dog.</h5>
+                    <h5 class="classifier-text text-center" style="padding: 1rem;">Upload an image and try it now!</h5>
+                    <form class="mt-3 image-classifier-form" style="padding: 1rem;" action="/" method="POST" enctype="multipart/form-data"
+                        id="image-classification-form" name="image-classification-form">
+                        <!-- Input for file -->
+                        <div class="d-flex justify-content-center">
+                            <input class="form-control file-browse" required="required" type="file" id="imagefile"
+                                name="imagefile" onchange="previewImage()" style="width:40%;">
+                        </div>
+
+                        <!-- Image preview container -->
+                        <div class="image-review d-flex justify-content-center">
+                            <img id="imagePreview" class="mt-3" src="#" alt="Image Preview"
+                                style="display: none; max-width: 10rem; max-height: 10rem;">
+                        </div>
+
+                        <!-- Submit button -->
+                        <div class="mt-3 submit-button d-flex justify-content-center">
+                            <button id="submit-button" class="mybtn predict-img-btn mt-3" type="submit"
+                                name="image-classification-form">Predict Image</button>
+                        </div>
+                    </form>
+
+                    <!-- Displaying the prediction -->
+                    {% if prediction %}
+                    <div id="display-prediction">
+                        <div class="d-flex justify-content-center">
+                            <img class="mt-3" src="{{ img_path }}" alt="Uploaded Image"
+                                style="max-width: 10rem; max-height: 10rem;">
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <p class="prediction-result text-center mt-3">{{ prediction }}</p>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button href="/" class="mybtn mt-3" id="predictAnotherImageButton" style="width: fit-content; text-decoration : none;" onclick="resetFormAndSection()">Predict Another Image</button>
+                        </div>
+                    </div>
+                    <script>
+                        var theFormItself = document.getElementById('image-classification-form');
+                        theFormItself.style.display = 'none';
+                    </script>
+                    {% endif %}
+                </div>
+            </section>
+            <!-- Cat / Dog Classifier Section End -->
+            <!-- Text Sentiment Analysis Section Start -->
+            <section class="sentiment-analysis section hidden {% if active_section == 'sentiment-analysis' %}active{% endif %}" id="sentiment-analysis">
+                <div class="container">
+                    <h2 class="text-center" style="color : #183153 ;  font-size : calc(1em * 2); font-weight :500;">
+                        Text Sentiment Analysis</h2>
+                    <form class="mt-6 mb-lg-4 p-3 sentiment-form form" action="/" method="POST"
+                        name="sentiment-analysis-form" id="sentiment-form">
+                        <!-- Input for file -->
+                        <div class="d-flex justify-content-center">
+                            <textarea class="sentiment-input-text" required="required" name="sentiment-analysis-form"
+                                id="sentiment-analysis-form" placeholder="Enter Your Text"></textarea>
+                        </div>
+                        <div class="mt-5 d-flex justify-content-center" style="width: 100%;">
+                            <button type="submit" name="sentiment-analysis-form" id="sentiment-btn" class="mybtn"
+                                style="width: fit-content;">Analyze Sentiment</button>
+                        </div>
+                    </form>
+                    {% if message%}
+                    <script>
+                        var sentiment_form = document.getElementById('sentiment-form');
+                        sentiment_form.style.display = 'none';
+                    </script>
+                    <div id="sentiment-input-display" class="justify-content-center" style="display:flex;width: 100%;margin-bottom : 3rem;">
+                        <p id="output-sentiment" class="output-sentiment">Input : {{text}}</p>
+                    </div>
+                    <!-- Displaying the sentiment analysis result -->
+                    {% if message == "Positive" %}
+                    <div id = "message-container" class="message-container justify-content-center" style="display:flex;gap: 1rem; width: 100%;">
+                        <h1 class="output" style="color: var(--secondary-color);">{{message}}</h1>
+                        <i class="fa-solid fa-face-grin-wink"
+                            style="font-size: calc(1.375rem + 1.5vw); margin-left: 0.5rem;"></i>
+                    </div>
+                    {% endif %}
+
+                    {% if message == "Negative" %}
+                    <div id = "message-container" class="message-container justify-content-center" style="display:flex; gap: 1rem; width: 100%;">
+                        <h1 class="output" style="color: var(--secondary-color);">{{message}}</h1>
+                        <i class="fa-solid fa-face-frown-open"
+                            style="font-size: calc(1.375rem + 1.5vw); margin-left: 0.5rem;"></i>
+                    </div>
+                    {% endif %}
+
+                    {% if message == "Neutral" %}
+                    <div id = "message-container" class="message-container justify-content-center" style="display:flex; gap: 1rem; width: 100%;">
+                        <h1 class="output" style="color: var(--secondary-color);">{{message}}</h1>
+                        <i class="fa-solid fa-face-rolling-eyes"
+                            style="font-size: calc(1.375rem + 1.5vw); margin-left: 0.5rem;"></i>
+                    </div>
+
+                    {% endif %}
+
+                    <div id="resetSentimentForm" class="justify-content-center" style="display: flex;">
+                        <button class="mybtn mt-3" style="width: fit-content; text-decoration : none;" onclick="resetSentimentFormAndSection()">New Text</button>
+                    </div>
+                    {% endif %}
+                </div>
+            </section>
+            <!-- Text Sentiment Analysis Section End -->
+
+            <!-- NER Section Start -->
+            <section class="NER section hidden {% if active_section == 'NER' %}active{% endif %}" id="NER">
+                <div class="container">
+                    <h2 class="text-center "
+                        style="color : #183153 ;  font-size : calc(1em * 2); font-weight :500; margin-bottom : 2rem;">
+                        Named Entity Recognition (NER)</h2>
+                    <!-- NER Explaination Start -->
+                    <div class="explaination-container" id="explaination-container">
+                        <div class="input-box">
+                            <div class="input-title">
+                                Inputs
+                            </div>
+                            <p class="input-desc">
+                                My name is Omar and I live in Zürich.
+                            </p>
+                        </div>
+
+                        <div class="token-box">
+                            <svg class="arrow1" width="87" height="30" viewBox="0 0 87 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" style="">
+                                <defs>
+                                    <linearGradient id="linear-gradient-uap2ucyos">
+                                        <stop offset="0%" stop-color="#dbeafe"></stop>
+                                        <stop offset="100%" stop-color="currentColor"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M0.976675 22.6978C0.451106 23.3381 0.544167 24.2833 1.18453 24.8089C1.8249 25.3345 2.77008 25.2414 3.29565 24.601L0.976675 22.6978ZM85.8237 27.948L81.0878 11.2875L69.0273 23.7192L85.8237 27.948ZM3.29565 24.601C8.9058 17.7655 18.9303 9.8542 31.4914 6.99576C43.9669 4.1568 59.1046 6.26142 75.1673 19.694L77.0918 17.3927C60.3459 3.38874 44.2588 1.01368 30.8258 4.07055C17.4783 7.10792 6.91044 15.4679 0.976675 22.6978L3.29565 24.601Z"
+                                    fill="url(#linear-gradient-uap2ucyos)"></path>
+                            </svg>
+                            <svg class="square" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false"
+                                role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+                                viewBox="0 0 24 24">
+                                <path class="uim-quaternary"
+                                    d="M20.23 7.24L12 12L3.77 7.24a1.98 1.98 0 0 1 .7-.71L11 2.76c.62-.35 1.38-.35 2 0l6.53 3.77c.29.173.531.418.7.71z"
+                                    opacity=".25" fill="currentColor"></path>
+                                <path class="uim-tertiary"
+                                    d="M12 12v9.5a2.09 2.09 0 0 1-.91-.21L4.5 17.48a2.003 2.003 0 0 1-1-1.73v-7.5a2.06 2.06 0 0 1 .27-1.01L12 12z"
+                                    opacity=".5" fill="currentColor"></path>
+                                <path class="uim-primary"
+                                    d="M20.5 8.25v7.5a2.003 2.003 0 0 1-1 1.73l-6.62 3.82c-.275.13-.576.198-.88.2V12l8.23-4.76c.175.308.268.656.27 1.01z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            <div class="token-desc">ML Model</div>
+                            <svg class="arrow2" width="87" height="30" viewBox="0 0 87 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" style="transform: scaleX(-1) rotate(180deg);">
+                                <defs>
+                                    <linearGradient id="linear-gradient-qxradpgyg">
+                                        <stop offset="0%" stop-color="currentColor"></stop>
+                                        <stop offset="100%" stop-color="#86efac"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M0.976675 22.6978C0.451106 23.3381 0.544167 24.2833 1.18453 24.8089C1.8249 25.3345 2.77008 25.2414 3.29565 24.601L0.976675 22.6978ZM85.8237 27.948L81.0878 11.2875L69.0273 23.7192L85.8237 27.948ZM3.29565 24.601C8.9058 17.7655 18.9303 9.8542 31.4914 6.99576C43.9669 4.1568 59.1046 6.26142 75.1673 19.694L77.0918 17.3927C60.3459 3.38874 44.2588 1.01368 30.8258 4.07055C17.4783 7.10792 6.91044 15.4679 0.976675 22.6978L3.29565 24.601Z"
+                                    fill="url(#linear-gradient-qxradpgyg)"></path>
+                            </svg>
+                        </div>
+
+                        <div class="output-box">
+                            <div class="output-title">
+                                Output
+                            </div>
+                            <div class="output-result">
+                                My name is <span class="PER">Omar <span class="PER-tag">PERSON</span></span> and I live
+                                in <span class="LOC">Zürich <span class="LOC-tag">LOC</span></span>.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- NER Explaination End -->
+                    <!-- NER Form Start -->
+                    <form class="p-3 NER-form form" action="/" method="POST" name="NER-form" id="NER-form"
+                        style="margin-top: 2rem;">
+                        <!-- Input for file -->
+                        <div class="d-flex justify-content-center">
+                            <textarea class="NER-input-textarea" required="required" name="NER-form" id="NER-form-text"
+                                placeholder="Your Sentence here"></textarea>
+                        </div>
+                        <div class="NER-button-cover d-flex justify-content-center" style="width: 100%; margin-top : 3rem">
+                            <button type="submit" name="NER-form" id="NER-btn" class="mybtn"
+                                style="width: fit-content;">Compute</button>
+                        </div>
+                    </form>
+                    <!-- NER Form End -->
+
+                    <!-- Displaying the NER result -->
+                    {% if NER_result %}
+                    <script>
+                        var NER_form = document.getElementById('NER-form');
+                        var explaination_container = document.getElementById("explaination-container");
+                        explaination_container.style.display = 'none';
+                        NER_form.style.display = 'none';
+                    </script>
+                    <div id = "raw-text-result" class=" justify-content-center " style="display: flex;">
+                        <div class="raw-text-result">
+                            <p class="output-NER" style="color: black;">{{raw_text}}</p>
+                        </div>
+                    </div>
+                    <div id="NER-result" class="justify-content-center" style="display: flex;">
+                        <div class="text-output">
+                            <p class="output" style="color: black;">{{NER_result|markdown}}</p>
+                        </div>
+                    </div>
+                    
+
+                    <div class="resetNER-cover d-flex justify-content-center" style="margin-top : 4rem;">
+                        <button id="resetNER" class="mybtn" style="width: fit-content; text-decoration : none;" onclick="resetNER()">New Text</button>
+                    </div>
+                    {% endif %}
+                    <!-- Displaying the NER result End -->
+                </div>
+            </section>
+            <!-- NER Section End -->
+            <!-- Contact Section Start -->
+            <section class="contact section hidden" id="contact">
+                <div class="container">
+                    <h2 class="text-center"
+                        style="color: #183153; font-size: 2rem; font-weight: 500; margin-bottom: 2rem;">Contact</h2>
+                    <h4 class="contact-sub-title" style="color: #183153; margin-bottom : 2.5rem;">Don't be shy! Hit me up! 👇</h4>
+                    <!-- Contact item Start -->
+                    <div class="row contact-item-container" style="flex-wrap : wrap;">
+                        <div class="col-md-4 contact-info-item" style="display: flex !important; gap:1rem;">
+                            <div class="icon contact-email-icon"><i class="fa fa-envelope"></i></div>
+                            <div class="contact-info">
+                                <h4>Email</h4>
+                                <p>vinhphu.phan@students.mq.edu.au</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 contact-info-item phone"
+                            style="display: flex !important; gap:1rem;width: 18rem;">
+                            <div class="icon"><i class="fa fa-phone"></i></div>
+                            <div class="contact-info">
+                                <h4>Phone</h4>
+                                <p>+61 406 114 184</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 contact-info-item" style="display: flex !important; gap:1rem;">
+                            <div class="icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <div class="contact-info">
+                                <h4>Location</h4>
+                                <p>Ryde, Sydney NSW, Australia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact item End -->
+                    <h4 class="contact-form-heading">Message Me</h4>
+                    <!-- Contact Form Start-->
+                    <div class="row">
+                        <form action="https://formsubmit.co/73768aaed4cbb9e4030b010818e4b25c" method="POST" class="contact-form padd-15">
+                            <div class="row mb-2">
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name" name="name">
+                                    </div>
+                                </div>
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email" name="email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Subject" name="subject">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <textarea name="message" id="" class="form-control" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15 d-flex justify-content-center align-items-center">
+                                    <div class="form-group">
+                                        <button type="submit" class="mybtn" style="width: fit-content;">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>                    
+                    <!-- Contact Form End-->
+                </div>
+            </section>
+            <!-- Contact Section End -->
+        </div>
+        <!-- Main Content End -->
+    </div>
+    <!-- Main Container End -->
+
+    <!-- JavaScript -->
+    <script>
+        function previewImage() {
+            var fileInput = document.getElementById('imagefile');
+            var imagePreview = document.getElementById('imagePreview');
+
+            if (fileInput.files && fileInput.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                };
+
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+        }
+        const navLinks = document.querySelectorAll(".nav a");
+        const sections = document.querySelectorAll("section");
+        
+        // Attach a click event listener to navigation links
+        navLinks.forEach(link => {
+            link.addEventListener("click", event => {
+                event.preventDefault(); // Prevent default link behavior (page reload)
+        
+                const targetSectionId = link.getAttribute("href").replace("#", "");
+        
+                sections.forEach(section => {
+                    if (section.id === targetSectionId) {
+                        section.classList.remove("hidden");
+                    } else {
+                        section.classList.add("hidden");
+                    }
+                });
+        
+                navLinks.forEach(navLink => {
+                    navLink.classList.remove("active");
+                });
+        
+                link.classList.add("active");
+            });
+        });
+        
+        
+        window.onload = function() {
+            // Get the active section value from the Flask variable
+            const activeSection = "{{ active_section }}";
+    
+            // Function to click the corresponding anchor tag
+            function clickActiveLink() {
+                const activeLink = document.getElementById(`${activeSection}-link`);
+                if (activeLink) {
+                    activeLink.click();
+                }
+            }
+    
+            // Initial click
+            clickActiveLink();
+        };
+        
+        // Function to programmatically click the contact link
+        function clickContactLink() {
+            const contactLink = document.getElementById('contact-link');
+
+            if (contactLink) {
+                contactLink.click();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggler = document.getElementById('toggle-btn');
+            const sidebar = document.querySelector('.sidebar');
+            const navItems = document.querySelectorAll('.nav li a');
+        
+            navToggler.addEventListener('click', function () {
+                toggleSidebar();
+            });
+        
+            // Add click event listeners to all nav items
+            navItems.forEach(function (navItem) {
+                navItem.addEventListener('click', function () {
+                    removeActiveState();
+                });
+            });
+        
+            // Close sidebar when clicking outside of it
+            document.addEventListener('click', function (event) {
+                const isClickInsideSidebar = sidebar.contains(event.target);
+                if (!isClickInsideSidebar) {
+                    removeActiveState();
+                }
+            });
+        
+            function toggleSidebar() {
+                sidebar.classList.toggle('active');
+                navToggler.classList.toggle('active');
+            }
+        
+            function removeActiveState() {
+                sidebar.classList.remove('active');
+                navToggler.classList.remove('active');
+            }
+        });
+
+        function resetFormAndSection() {
+            // Reset the form fields
+            document.getElementById('image-classification-form').reset();
+    
+            // Hide the display-prediction section
+            document.getElementById('display-prediction').style.display = 'none';
+    
+            // Display the image-classifier section
+            document.getElementById('image-classification-form').style.display = 'block';
+        }
+
+        function resetSentimentFormAndSection() {
+            // Reset the form fields
+            document.getElementById('sentiment-form').reset();
+    
+            // Hide the display-sentiment section
+            document.getElementById('message-container').style.display = 'none';
+            document.getElementById("sentiment-input-display").style.display = 'none';
+            document.getElementById("resetSentimentForm").style.display = 'none';
+            
+            // Display the sentiment-analysis section
+            document.getElementById('sentiment-form').style.display = 'block';
+        }
+
+        function resetNER() {
+            // Reset the form fields
+            document.getElementById('NER-form').reset();
+    
+            // Hide the display-out section
+            document.getElementById('NER-result').style.display = 'none';
+            document.getElementById("raw-text-result").style.display = 'none';
+            document.getElementById("resetNER").style.display = 'none';
+
+            // Display form
+            document.getElementById('NER-form').style.display = 'block';
+            document.getElementById('explaination-container').style.display = 'flex';
+        }
+    </script>   
+</body>
+
+</html>
