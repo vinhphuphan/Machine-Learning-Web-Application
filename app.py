@@ -9,6 +9,7 @@ import nltk
 import spacy
 from spacy import displacy
 from flaskext.markdown import Markdown
+
 nltk.download('vader_lexicon')
 
 UPLOAD_FOLDER = "./static/user_input/"
@@ -97,4 +98,4 @@ def handle_form_submission():
     return render_template("index.html")
 
 if __name__ == '__main__':
-    app.run(host = "0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
