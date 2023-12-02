@@ -181,7 +181,7 @@ body {
 }
 
 .home .home-info {
-    padding-left: 20px;
+    padding-left: 12px;
     flex: 0 0 60%;
     max-width: 60%;
 }
@@ -430,7 +430,7 @@ h2.hello img {
 .arrow2 {
     color: rgb(219 234 254);
     position: absolute;
-    bottom: 0;
+    bottom: -2rem;
     right: -3.5rem;
     z-index: 10;
 }
@@ -617,7 +617,7 @@ h2.hello img {
 
     .sidebar .nav-toggler {
         display: block;
-        left: 1.5rem;
+        left: 1rem;
     }
 
     .sidebar .nav-toggler i {
@@ -922,7 +922,8 @@ h2.hello img {
     }
 
     .text2 {
-        font-size: 13px; 
+        font-size: 13px;
+        text-align: center; 
     }
 
     .home-info-link {
@@ -938,7 +939,7 @@ h2.hello img {
     }
 
     .icon-list {
-        padding-left: 1rem!important;
+        padding-left: 0!important;
         flex-wrap: wrap;
     }
 
@@ -1046,7 +1047,10 @@ h2.hello img {
     }
 
     .explaination-container {
-        height: 17vh;
+        height: 20vh;
+    }
+    .arrow1 {
+        top: -1rem;
     }
 }
 
