@@ -178,6 +178,7 @@ body {
     margin: auto;
     color: var(--text-black-900);
     display: flex;
+    margin-left: 1rem;
 }
 
 .home .home-info {
@@ -216,7 +217,7 @@ h2.hello img {
 }
 
 .home-info-link {
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .home-info-link a svg {
@@ -256,8 +257,8 @@ h2.hello img {
     background-repeat: no-repeat;
     background-size: cover;
     border: 3px solid #2d2e32;
-    height: 24rem;
-    width: 27rem;
+    height: 20rem;
+    width: 22rem;
     position: relative;
     transition: all 1s ease-in-out;
     animation: blob 8s ease-in-out infinite;
