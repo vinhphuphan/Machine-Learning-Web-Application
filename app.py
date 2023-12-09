@@ -98,4 +98,4 @@ def handle_form_submission():
     return render_template("index.html")
 
 if __name__ == '__main__':
-    app.run(port=5500, debug=True)
+    app.run(debug=True)
