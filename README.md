@@ -4,7 +4,7 @@
 
 ### About the project
 
-<p><strong>A responsive modern style web application</strong> for machine learning tasks, including image classification, sentiment analysis, and named entity recognition (NER). This app serves as a versatile starting point for developers keen on creating web applications with Flask, seamlessly integrating machine learning models, and delving into diverse natural language processing (NLP) tasks.</p>
+<p>A responsive modern style web application for machine learning tasks, including image classification, sentiment analysis, and named entity recognition (NER). This app serves as a versatile starting point for developers keen on creating web applications with Flask, seamlessly integrating machine learning models, and delving into diverse natural language processing (NLP) tasks.</p>
 
 ### Links
 👉 Live Site URL: [Machine Learning Web Application](http://74.226.193.39/)
