@@ -33,7 +33,7 @@
 - Follow the instructions to upload an image or input text for analysis.
 - Explore the predictions and results provided by the machine learning models.
 
-https://github.com/vinhphuphan/Machine-Learning-Web-Application/blob/main/static/images/demo1.mp4
+
 
 ## Related Projects: 👨‍💻 🛰️
 
