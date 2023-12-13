@@ -34,6 +34,12 @@
 - Explore the predictions and results provided by the machine learning models.
 
 
+https://github.com/vinhphuphan/Machine-Learning-Web-Application/assets/109563372/7ee3dd7e-3582-4879-88f2-fa26d5f1a397
+
+[demo2](https://github.com/vinhphuphan/Machine-Learning-Web-Application/assets/109563372/7b89066d-f138-4452-9d9b-93c4a9c5f75d)
+
+[[demo3]https://github.com/vinhphuphan/Machine-Learning-Web-Application/assets/109563372/ca2b3b90-90fc-4231-9a6e-e35caf2fc18a](https://github.com/vinhphuphan/Machine-Learning-Web-Application/assets/109563372/84f39dba-959c-454a-80c6-c17fca75690b)
+
 ## Related Projects: 👨‍💻 🛰️
 
 **Data Analysis**
