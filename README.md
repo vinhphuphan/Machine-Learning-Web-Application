@@ -34,7 +34,6 @@
 - Explore the predictions and results provided by the machine learning models.
 
 
-
 ## Related Projects: 👨‍💻 🛰️
 
 **Data Analysis**
