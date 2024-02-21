@@ -6,9 +6,6 @@
 
 <p>A responsive modern style web application for machine learning tasks, including image classification, sentiment analysis, and named entity recognition (NER). This app serves as a versatile starting point for developers keen on creating web applications with Flask, seamlessly integrating machine learning models, and delving into diverse natural language processing (NLP) tasks.</p>
 
-### Links
-👉 Live Site URL: [Machine Learning Web Application](http://74.226.193.39/)
-
 ### Features
 - Image Classification:
   - Upload an image to get a prediction whether it contains a cat or a dog.
@@ -39,30 +36,6 @@ https://github.com/vinhphuphan/Machine-Learning-Web-Application/assets/109563372
 [demo2](https://github.com/vinhphuphan/Machine-Learning-Web-Application/assets/109563372/7b89066d-f138-4452-9d9b-93c4a9c5f75d)
 
 [[demo3]https://github.com/vinhphuphan/Machine-Learning-Web-Application/assets/109563372/ca2b3b90-90fc-4231-9a6e-e35caf2fc18a](https://github.com/vinhphuphan/Machine-Learning-Web-Application/assets/109563372/84f39dba-959c-454a-80c6-c17fca75690b)
-
-## Related Projects: 👨‍💻 🛰️
-
-**Data Analysis**
-
-<code>[Olympic-Weightlifting-Data-Analysis Using R](https://github.com/vinhphuphan/Olympic-Weightlifting-Data-Analysis)</code> 📊
-
-<code>[Australia Road Deaths Statistic Report Using Excel](https://github.com/vinhphuphan/Australia-Road-Deaths-Statistic)</code> 📊
-
-<code>[Titanic - Machine Learning from Disaster using Python](https://github.com/vinhphuphan/Titanic-Machine-Learning-from-Disaster)</code> 📊
-
-<code>[Australian Politicians Twitter Data Analysis Using Python](https://github.com/vinhphuphan/Tweets-Analysis)</code> 📊
-
-**Data Science Applications**
-
-<code>[Text Classification With Movie Reviews](https://github.com/vinhphuphan/Text-Classification-With-Movie-Reviews/)</code> 📊
-
-<code>[Living Species Image Classification using Python](https://github.com/vinhphuphan/Living-Species-Image-Classification)</code> 📊
-
-<code>[Name Entity Recognition](https://github.com/vinhphuphan/Name-Entity-Recognition)</code> 📊
-
-**Website Front End Practice**
-
-<code>[Hospital-Landing-Page](https://github.com/vinhphuphan/Hospital-Landing-Page/)</code> 📊
 
 <code>[LaslesVPN Landing Page](https://github.com/vinhphuphan/Lasles-VPN-Landing-Page)</code> 📊
 
